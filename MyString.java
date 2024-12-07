@@ -9,11 +9,7 @@ public class MyString {
         System.out.println(countChar(hello, 'z'));
         System.out.println(countChar("Hello", 'h'));
         System.out.println(spacedString(hello));
-        System.out.println("\nTesting remove:");
-        System.out.println("committee - meet -> " + remove("committee", "meet") + " (expected: comit)");
-        System.out.println("abc - abc -> " + remove("abc", "abc") + " (expected: )");
-        System.out.println("abc - b -> " + remove("abc", "b") + " (expected: ac)");
-        System.out.println("hello - empty string -> " + remove("hello", "") + " (expected: hello)");
+       
         
     }
 
