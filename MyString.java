@@ -122,7 +122,7 @@ public class MyString {
      * For example, insertRandomly("s","cat") can return "scat", or "csat", or "cast", or "cats".  
      * @param ch - a character
      * @param str - a string
-     * @return a string consisting of str with ch inserted somewhere
+     * @return a string consistin   g of str with ch inserted somewhere
      */
     public static String insertRandomly(char ch, String str) {
          // Generate a random index between 0 and str.length()

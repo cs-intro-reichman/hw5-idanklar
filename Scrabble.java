@@ -100,24 +100,9 @@ public class Scrabble {
 			// non-whitespace characters. Whitespace is either space characters, or  
 			// end-of-line characters.
 			String input = in.readString();
-
 			input = input.toLowerCase();
-			boolean isValid = false;
-			for (int i = 0; i < input.length(); i++) {
-				for (int j = 0; j < hand.length(); j++) {
-					if (hand.charAt(j) == input.charAt(i)) {
-						isValid = true;
-					}
-				}
-				if (isValid && i != input.length() - 1 ) {
-					isValid = false;
-				} else {
-					break;
-				}
-			}
 			if (input.equals(".")) break;
-			else if (isValid == false) System.out.println("Invalid word. Try again.");
-			else if (input.length() > hand.length()) System.out.println("Invalid word. Try again");
+			else if (MyString.subsetOf(input, hand) == false) System.out.println("Invalid word. Try again");
 			else if (isWordInDictionary(input)) {
 				score += wordScore(input);
 				hand = MyString.remove(hand, input);	
