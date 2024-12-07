@@ -41,21 +41,13 @@ public class MyString {
      * @return true is str1 is a subset of str2, false otherwise
      */
     public static boolean subsetOf(String str1, String str2) {
-         boolean isSubset = false;
-         if (str1.length() > str2.length()) return false;
-         if(str1.length() == 0) return true;
-         for (int i = 0; i < str1.length(); i++) {
-            int countCharSub = countChar(str1, str1.charAt(i));
-            int countCharSet = countChar(str2, str1.charAt(i));
-            if (countCharSub > countCharSet) return false;
-
-            for (int j = 0; j < str2.length(); j++) {
-                if (str1.charAt(i) == str2.charAt(j)) countCharSub--;
+        if (str1.length() > str2.length()) return false;
+        for (int i = 0; i < str1.length(); i++) {
+            if (countChar(str1, str1.charAt(i)) > countChar(str2, str1.charAt(i))) {
+                return false;
             }
-            if (countCharSub == 0) isSubset = true;
-            else return false; 
-         }
-        return isSubset;
+        }
+        return true;
     }
 
     /** Returns a string which is the same as the given string, with a space
