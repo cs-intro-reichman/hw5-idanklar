@@ -99,7 +99,7 @@ public class Scrabble {
 			// Reads the next "token" from the keyboard. A token is defined as a string of 
 			// non-whitespace characters. Whitespace is either space characters, or  
 			// end-of-line characters.
-			String input = in.readString();
+			String input = in.readLine();
 			input = input.toLowerCase();
 			if (input.equals(".")) break;
 			else if (MyString.subsetOf(input, hand) == false) System.out.println("Invalid word. Try again");
