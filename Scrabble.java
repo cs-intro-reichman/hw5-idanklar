@@ -141,6 +141,7 @@ public class Scrabble {
 			else {
 				System.out.println("Invalid input");
 			}
+			System.out.println();
 		}
 	}
 
