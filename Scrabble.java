@@ -101,16 +101,16 @@ public class Scrabble {
 			// non-whitespace characters. Whitespace is either space characters, or  
 			// end-of-line characters.
 			String input = in.readLine();
-			input = input.toLowerCase();
-			if (input.equals(".")) n = 0;
-			else if (MyString.subsetOf(input, hand) == false || input.equals("")) System.out.println("Invalid word. Try again" + "\n");
-			else if (isWordInDictionary(input)) {
-				score += wordScore(input);
-				hand = MyString.remove(hand, input);	
-				System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points" + "\n");
-				n = hand.length();
+			if (isWordInDictionary(input)){
+				score+= wordScore(input);
+				hand = MyString.remove(hand, input);
+				System.out.println(input+" earned "+wordScore(input)+" points. Score: "+score+" points"+"\n");
+			}else if (!isWordInDictionary(input) && !input.equals(".")){
+				System.out.println("Invalid word. Try again.");
 			}
-			else System.out.println("No such word in the dictionary. Try again." + "\n");
+			if (input.equals(".")){
+				n=0;
+			}	
 			}
 
 		if (hand.length() == 0) {
