@@ -110,6 +110,7 @@ public class Scrabble {
 				System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points" + "\n");
 			}
 			else System.out.println("No such word in the dictionary. Try again.");
+			n = hand.length();
 			}
 
 		if (hand.length() == 0) {
@@ -151,8 +152,8 @@ public class Scrabble {
 		// testBuildingTheDictionary();  
 		// testScrabbleScore();    
 		// testCreateHands();  
-		// testPlayHands();
-		playGame();
+		testPlayHands();
+		// playGame();
 	}
 
 	public static void testBuildingTheDictionary() {
@@ -178,8 +179,8 @@ public class Scrabble {
 	}
 	public static void testPlayHands() {
 		init();
-		playHand("ocostrza");
-		playHand("arbffip");
 		playHand("aretiin");
+		// playHand("arbffip");
+		// playHand("aretiin");
 	}
 }
