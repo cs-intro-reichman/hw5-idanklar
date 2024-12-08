@@ -103,14 +103,14 @@ public class Scrabble {
 			String input = in.readLine();
 			input = input.toLowerCase();
 			if (input.equals(".")) n = 0;
-			else if (MyString.subsetOf(input, hand) == false || input.equals("")) System.out.println("Invalid word. Try again");
+			else if (MyString.subsetOf(input, hand) == false || input.equals("")) System.out.println("Invalid word. Try again" + "\n");
 			else if (isWordInDictionary(input)) {
 				score += wordScore(input);
 				hand = MyString.remove(hand, input);	
 				System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points" + "\n");
 				n = hand.length();
 			}
-			else System.out.println("No such word in the dictionary. Try again.");
+			else System.out.println("No such word in the dictionary. Try again." + "\n");
 			}
 
 		if (hand.length() == 0) {
