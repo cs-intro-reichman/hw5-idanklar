@@ -102,14 +102,14 @@ public class Scrabble {
 			// end-of-line characters.
 			String input = in.readLine();
 			if (isWordInDictionary(input)){
-				score+= wordScore(input);
+				score += wordScore(input);
 				hand = MyString.remove(hand, input);
-				System.out.println(input+" earned "+wordScore(input)+" points. Score: "+score+" points"+"\n");
+				System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points"+ "\n");
 			}else if (!isWordInDictionary(input) && !input.equals(".")){
 				System.out.println("Invalid word. Try again.");
 			}
 			if (input.equals(".")){
-				n=0;
+				n = 0;
 			}	
 			}
 
